@@ -1,6 +1,3 @@
-/**
- * 
- */
 package com.cognizant.pms.processpension.model;
 
 import java.util.Date;
@@ -13,11 +10,6 @@ import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-
-/**
- * @author Suman Chakraborty
- *
- */
 
 @Getter
 @Setter

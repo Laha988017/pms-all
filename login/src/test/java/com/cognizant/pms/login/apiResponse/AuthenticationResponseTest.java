@@ -13,7 +13,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 public class AuthenticationResponseTest {
 	
 	@Test
-	public void testAuthenticationResponse() {
+	public void test_AuthenticationResponse() {
 		AuthenticationResponse authenticationResponse = new AuthenticationResponse();
 		authenticationResponse.setId(0);
 		authenticationResponse.setToken("hfvyhvjv");;

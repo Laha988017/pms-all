@@ -14,7 +14,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 public class AuthenticationRequestTest {
 	
 	@Test
-	public void testAuthenticationRequest() {
+	public void test_Authentication_Request() {
 		AuthenticationRequest authenticationRequest = new AuthenticationRequest();
 		authenticationRequest.setPassword("abc");
 		authenticationRequest.setUserName("abc");

@@ -1,12 +1,6 @@
-/**
- * August 2022
- */
 package com.cognizant.pms.processpension.util;
 
-/**
- * @author Suman Chakraborty
- *
- */
+
 public class CommonConstants {
 	
 	public static String SELF_PENSION = "SELF";

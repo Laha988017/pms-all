@@ -26,19 +26,19 @@ public class GetPensionerDetailsControllerTest {
     private GetPensionerDetailsController getPensionerDetailsController;
     
     @Before
-    public void initialize() {
+    public void init() {
     	when(service.validateAuth(CommonTestConstants.VALID_JWT_TOKEN)).thenReturn(true);
     	when(service.validateAuth(CommonTestConstants.INVALID_JWT_TOKEN)).thenReturn(false);
     	when(service.findPensionDetailsFromCSV("123")).thenReturn(new PensionerDetails());
     }
 	
 	@Test
-	public void getPensionerDetailsTestWithValidAuth() {
+	public void get_Pensioner_Details_Test_With_ValidAuth() {
 		assertEquals(200, getPensionerDetailsController.getPensionerDetails(CommonTestConstants.VALID_JWT_TOKEN, "123").getBody().getStatus());
 	}
 	
 	@Test
-	public void getPensionerDetailsTestWithInvalidAuth() {
+	public void get_Pensioner_Details_Test_With_InvalidAuth() {
 		assertEquals(401, getPensionerDetailsController.getPensionerDetails(CommonTestConstants.INVALID_JWT_TOKEN, "123").getBody().getStatus());
 	}
 

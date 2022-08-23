@@ -13,7 +13,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 public class PensionerDetailsTest {
 	
 	@Test
-	public void testPensionerDetailsModel() {
+	public void test_Pensioner_Details_Model() {
 		PensionerDetails pd = new PensionerDetails();
 		pd.setBank(new Bank());
 		pd.setPensioner(new Pensioner());

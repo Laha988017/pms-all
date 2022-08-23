@@ -19,7 +19,7 @@ public class GetPensionDetailsFromCsvUtilTest {
 	GetPensionDetailsFromCsvUtil getPensionDetailsFromCsvUtil;
 	
 	@Test
-	public void testGetDetailsFromCSV() throws IOException, ParseException {
+	public void test_GetDetails_FromCSV() throws IOException, ParseException {
 		assertEquals(18, getPensionDetailsFromCsvUtil.getDetailsFromCSV().size());
 	}
 	

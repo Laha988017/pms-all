@@ -35,36 +35,36 @@ public class UserServiceTest {
 	private UserRepository userRepository;
 	
 	@Test(expected = LoginException.class)
-	public void createInvalidNewAccountTest() throws LoginException {
-		AuthenticationRequest request = new AuthenticationRequest("sch","2311");
-		when(userRepository.findByUserName("sch")).thenReturn(Optional.of(new User()));
+	public void create_Invalid_New_AccountTest() throws LoginException {
+		AuthenticationRequest request = new AuthenticationRequest("sulaha","2311");
+		when(userRepository.findByUserName("sulaha")).thenReturn(Optional.of(new User()));
 		userService.createNewAccount(request);
 	}
 	
 	@Test
-	public void createNewAccountTest() throws LoginException {
-		AuthenticationRequest request = new AuthenticationRequest("suman","1234");
-		when(userRepository.findByUserName("suman")).thenReturn(Optional.empty());
+	public void create_New_Account_Test() throws LoginException {
+		AuthenticationRequest request = new AuthenticationRequest("subhajit","1234");
+		when(userRepository.findByUserName("subhajit")).thenReturn(Optional.empty());
 		when(userRepository.saveAndFlush(ArgumentMatchers.any(User.class))).thenReturn(new User());
 		assertNotNull(userService.createNewAccount(request));
 	}
 	
 	@Test
-	public void authenticateValidTest() throws LoginException {
-		when(userRepository.findByUserName("sch")).thenReturn(Optional.of(new User(12345,"sch",passwordEncoder.encode("2311"))));
-		assertTrue(userService.authenticate("sch","2311"));
+	public void authenticate_Valid_Test() throws LoginException {
+		when(userRepository.findByUserName("sulaha")).thenReturn(Optional.of(new User(12345,"sulaha",passwordEncoder.encode("2311"))));
+		assertTrue(userService.authenticate("sulaha","2311"));
 	}
 	
 	@Test
-	public void authenticateInvalidPasswordTest() throws LoginException {
-		when(userRepository.findByUserName("sch")).thenReturn(Optional.of(new User(12345,"sch",passwordEncoder.encode("2311"))));
-		assertFalse(userService.authenticate("sch","1234"));
+	public void authenticate_Invalid_Password_Test() throws LoginException {
+		when(userRepository.findByUserName("sulaha")).thenReturn(Optional.of(new User(12345,"sulaha",passwordEncoder.encode("2311"))));
+		assertFalse(userService.authenticate("sulaha","1234"));
 	}
 	
 	@Test(expected = LoginException.class)
-	public void authenticateInvalidUsernameTest() throws LoginException {
-		when(userRepository.findByUserName("suman")).thenReturn(Optional.empty());
-		userService.authenticate("suman","1234");
+	public void authenticate_Invalid_Username_Test() throws LoginException {
+		when(userRepository.findByUserName("subhajit")).thenReturn(Optional.empty());
+		userService.authenticate("subhajit","1234");
 	}
 	
 }

@@ -1,6 +1,3 @@
-/**
- * August 2022
- */
 package com.cognizant.pms.processpension.util;
 
 import java.io.BufferedReader;
@@ -11,10 +8,7 @@ import com.cognizant.pms.processpension.exception.ProcessPensionException;
 
 import lombok.extern.slf4j.Slf4j;
 
-/**
- * @author Suman Chakraborty
- *
- */
+
 @Slf4j
 public class CalculatePensionUtil {
 	

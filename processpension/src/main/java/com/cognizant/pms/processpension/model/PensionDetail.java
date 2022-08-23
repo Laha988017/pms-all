@@ -1,6 +1,4 @@
-/**
- * August 2022
- */
+
 package com.cognizant.pms.processpension.model;
 
 import javax.persistence.Entity;
@@ -11,10 +9,6 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-/**
- * @author Suman Chakraborty
- *
- */
 
 @Getter
 @Setter

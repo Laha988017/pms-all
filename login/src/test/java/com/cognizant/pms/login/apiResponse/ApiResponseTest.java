@@ -12,7 +12,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 @SpringBootTest
 public class ApiResponseTest {
 	@Test
-	public void testApiResponse() {
+	public void test_ApiResponse() {
 		ApiResponse apiResponse = new ApiResponse();
 		apiResponse.setData(apiResponse);
 		apiResponse.setMessage("abc");

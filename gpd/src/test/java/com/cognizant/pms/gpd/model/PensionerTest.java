@@ -15,7 +15,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 public class PensionerTest {
 	
 	@Test
-	public void testBankModel() {
+	public void test_Bank_Model() {
 		Pensioner pensioner=new Pensioner();
 		pensioner.setAadharNo("123");
 		pensioner.setAccountNo("123");
